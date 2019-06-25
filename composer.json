@@ -1,0 +1,30 @@
+{
+    "name": "mongdch/mon-counter",
+    "description": "The PHP counter",
+    "version": "1.0.0",
+    "keywords": [
+        "counter",
+        "php",
+        "mon"
+    ],
+    "homepage": "http://gdmon.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MonGDCH",
+            "email": "985558837@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">= 5.6.0",
+        "mongdch/mon-orm": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "mon\\counter\\": "src"
+        },
+        "files": [
+
+        ]
+    }
+}

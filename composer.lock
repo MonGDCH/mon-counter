@@ -1,0 +1,68 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "674dace442d470188ab052f1aa92a70e",
+    "packages": [
+        {
+            "name": "mongdch/mon-orm",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MonGDCH/mon-orm.git",
+                "reference": "80fc53eb7efc32a449267c521c8a0137f5b1ee40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MonGDCH/mon-orm/zipball/80fc53eb7efc32a449267c521c8a0137f5b1ee40",
+                "reference": "80fc53eb7efc32a449267c521c8a0137f5b1ee40",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "mon\\orm\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "MonGDCH",
+                    "email": "985558837@qq.com"
+                }
+            ],
+            "description": "the php mysql orm",
+            "homepage": "http://blog.gdmonlam.com/",
+            "keywords": [
+                "mon",
+                "mysql",
+                "orm"
+            ],
+            "time": "2019-03-26T06:01:39+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">= 5.6.0"
+    },
+    "platform-dev": []
+}
