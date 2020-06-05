@@ -1,4 +1,5 @@
 <?php
+
 namespace mon\counter\model;
 
 use mon\orm\Model;
@@ -28,7 +29,7 @@ class Mark extends Model
     /**
      * 单例实现
      *
-     * @return void
+     * @return Mark
      */
     public static function instance()
     {
@@ -45,9 +46,9 @@ class Mark extends Model
      * @param  string  $mark1   标志位1
      * @param  string  $mark2   标志位2
      * @param  string  $remark  备注信息
-     * @return [type]          [description]
+     * @return mixed 标准位ID或者false
      */
-    public function createMark(string $mark1, string $mark2, string $remark = '')
+    public function createMark($mark1, $mark2, $remark = '')
     {
         $info = $this->getMark($mark1, $mark2);
         // 标志位已存在，直接返回标志位ID
@@ -76,9 +77,9 @@ class Mark extends Model
      *
      * @param  string $mark1 标志1
      * @param  string $mark2 标志2
-     * @return [type]        [description]
+     * @return mixed 标准位或者false
      */
-    public function getMark(string $mark1, string $mark2)
+    public function getMark($mark1, $mark2)
     {
         // 缓存数据
         static $cacheList = [];
@@ -104,7 +105,7 @@ class Mark extends Model
      * @param string $mark2  标志2
      * @return boolean
      */
-    public function hasMark(string $mark1, string $mark2)
+    public function hasMark($mark1, $mark2)
     {
         return !empty($this->getMark($mark1, $mark2));
     }

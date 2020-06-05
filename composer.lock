@@ -7,26 +7,74 @@
     "content-hash": "674dace442d470188ab052f1aa92a70e",
     "packages": [
         {
-            "name": "mongdch/mon-orm",
-            "version": "v2.1.0",
+            "name": "mongdch/mon-container",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/MonGDCH/mon-orm.git",
-                "reference": "80fc53eb7efc32a449267c521c8a0137f5b1ee40"
+                "url": "https://github.com/MonGDCH/mon-container.git",
+                "reference": "cae30a0fce957ef1c9df5a4dbe8f2fd46bfee374"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MonGDCH/mon-orm/zipball/80fc53eb7efc32a449267c521c8a0137f5b1ee40",
-                "reference": "80fc53eb7efc32a449267c521c8a0137f5b1ee40",
+                "url": "https://api.github.com/repos/MonGDCH/mon-container/zipball/cae30a0fce957ef1c9df5a4dbe8f2fd46bfee374",
+                "reference": "cae30a0fce957ef1c9df5a4dbe8f2fd46bfee374",
                 "shasum": "",
                 "mirrors": [
                     {
-                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
                         "preferred": true
                     }
                 ]
             },
             "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "mon\\factory\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MonGDCH",
+                    "email": "985558837@qq.com"
+                }
+            ],
+            "description": "the php factory container utils.",
+            "keywords": [
+                "container",
+                "factory",
+                "php"
+            ],
+            "time": "2019-06-24T06:02:58+00:00"
+        },
+        {
+            "name": "mongdch/mon-orm",
+            "version": "v2.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MonGDCH/mon-orm.git",
+                "reference": "3cb830c71e580756cacc29f46d19a95f150270ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MonGDCH/mon-orm/zipball/3cb830c71e580756cacc29f46d19a95f150270ee",
+                "reference": "3cb830c71e580756cacc29f46d19a95f150270ee",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "mongdch/mon-container": "^1.0",
                 "php": ">=5.6.0"
             },
             "type": "library",
@@ -52,7 +100,7 @@
                 "mysql",
                 "orm"
             ],
-            "time": "2019-03-26T06:01:39+00:00"
+            "time": "2020-05-30T05:43:04+00:00"
         }
     ],
     "packages-dev": [],

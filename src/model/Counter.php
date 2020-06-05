@@ -1,4 +1,5 @@
 <?php
+
 namespace mon\counter\model;
 
 use mon\orm\Model;
@@ -29,7 +30,7 @@ class Counter extends Model
     /**
      * 单例实现
      *
-     * @return void
+     * @return Counter
      */
     public static function instance()
     {
@@ -51,7 +52,7 @@ class Counter extends Model
      * @param string  $remard   标志位备注信息
      * @return boolean
      */
-    public function createCounterOfMark(string $mark1, string $mark2, int $count = 0, int $uid = 0, string $str = '', string $remark = '')
+    public function createCounterOfMark($mark1, $mark2, $count = 0, $uid = 0, $str = '', $remark = '')
     {
         // 获取标志位
         $markInfo = Mark::instance()->createMark($mark1, $mark2, $remark);
@@ -90,7 +91,7 @@ class Counter extends Model
      * @param string  $str      预留str字段（varchar类型）
      * @return boolean
      */
-    public function createCounter(string $mark1, string $mark2, int $count = 0, int $uid = 0, string $str = '')
+    public function createCounter($mark1, $mark2, $count = 0, $uid = 0, $str = '')
     {
         // 获取标志位
         $markInfo = Mark::instance()->getMark($mark1, $mark2);
@@ -128,7 +129,7 @@ class Counter extends Model
      * @param string  $str   附加条件
      * @return boolean
      */
-    public function hasCounter(string $mark1, string $mark2, int $uid = 0, string $str = '')
+    public function hasCounter($mark1, $mark2, $uid = 0, $str = '')
     {
         $markInfo = Mark::instance()->getMark($mark1, $mark2);
         if ($markInfo === false) {
@@ -150,7 +151,7 @@ class Counter extends Model
      * @param string  $str   附加条件
      * @return boolean
      */
-    public function addCount(string $mark1, string $mark2, int $step = 1, int $uid = 0, string $str = '')
+    public function addCount($mark1, $mark2, $step = 1, $uid = 0, $str = '')
     {
         $markInfo = Mark::instance()->getMark($mark1, $mark2);
         if ($markInfo === false) {
@@ -178,7 +179,7 @@ class Counter extends Model
      * @param string  $str   附加条件
      * @return boolean
      */
-    public function reduceCount(string $mark1, string $mark2 = '', int $step = 1, int $uid = 0, string $str = '')
+    public function reduceCount($mark1, $mark2 = '', $step = 1, $uid = 0, $str = '')
     {
         $markInfo = Mark::instance()->getMark($mark1, $mark2);
         if ($markInfo === false) {
@@ -206,7 +207,7 @@ class Counter extends Model
      * @param string  $str   附加条件
      * @return void
      */
-    public function modifyCount(string $mark1, string $mark2 = '', int $count, int $uid = 0, string $str = '')
+    public function modifyCount($mark1, $mark2 = '', $count, $uid = 0, $str = '')
     {
         $markInfo = Mark::instance()->getMark($mark1, $mark2);
         if ($markInfo === false) {
@@ -233,7 +234,7 @@ class Counter extends Model
      * @param string  $str   附加条件
      * @return void
      */
-    public function queryCount(string $mark1, string $mark2 = '', int $uid = null, string $str = null)
+    public function queryCount($mark1, $mark2 = '', $uid = null, $str = null)
     {
         $markInfo = Mark::instance()->getMark($mark1, $mark2);
         if ($markInfo === false) {
@@ -267,7 +268,7 @@ class Counter extends Model
      * @param string  $str   附加条件
      * @return void
      */
-    public function queryTotal(string $mark1, string $mark2 = '', int $uid = null, string $str = null)
+    public function queryTotal($mark1, $mark2 = '', $uid = null, $str = null)
     {
         $markInfo = Mark::instance()->getMark($mark1, $mark2);
         if ($markInfo === false) {
